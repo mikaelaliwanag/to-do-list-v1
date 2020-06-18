@@ -3,10 +3,14 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.get("/", function(req, res){
-    res.send("heyyy");
-})
+app.use("view engine", "ejs");
 
+app.get("/", function(req, res){
+  
+    var today = new Date();
+    var currentDay = today.getDay();
+
+})
 
 
 app.listen(8080, function(){
