@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+//to do list items array
 let items = ["Wake up", "Exist", "Survive"];
 
 app.set("view engine", "ejs");
@@ -27,10 +28,12 @@ app.get("/", function (req, res) {
 app.post("/", function(req, res) {
 	var item = req.body.newItem;
 
-	items.push(item);
+//does not push item if input is empty	
+	if(item !== "") {
+	   items.push(item);
+	}	
 
 	res.redirect("/");
-
 })
 
 

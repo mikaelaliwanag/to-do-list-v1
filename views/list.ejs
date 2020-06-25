@@ -9,13 +9,15 @@
 
    <h1><%= kindOfDay %></h1>
 
+   <!-- loops through items array and adds them to the list -->
    <ul>
    <% for (var i=0; i < newListItems.length; i++) { %>  
-        <li> <%= newListItems[i] %> </li>
+         <li> <%= newListItems[i] %> </li>
    <% } %>
 
    </ul>
 
+   <!-- Input and add new item -->
    <form class="" action="/" method="POST">
       <input type="text" name="newItem">
       <button type="submit" name="button">Add</button>
