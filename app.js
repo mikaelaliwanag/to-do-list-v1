@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 //to do list items array
-let items = ["Wake up", "Exist", "Survive"];
+let items = ["Code", "Nap", "Code some more"];
 
 app.set("view engine", "ejs");
 
